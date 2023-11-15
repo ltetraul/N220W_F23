@@ -97,3 +97,33 @@ function ddChoice() {
 }
 
 dropD.addEventListener('change', ddChoice);
+
+//add/delete list
+let myList = document.getElementById('myList');
+
+function addItem() {
+    let newItem = prompt("Enter Item: ");
+    let newLi = document.createElement('li');
+    let newText = document.createTextNode(newItem);
+    newLi.appendChild(newText);
+    myList.appendChild(newLi);
+}
+
+document.getElementsByTagName('button')[0].addEventListener('click', addItem);
+
+//delete any list item
+
+function getTarget(e) {
+    if(!e) {
+        e = window.event;
+    }
+    return e.target || e.srcElement;
+}
+
+function deleteItem() {
+    let target = getTarget(e);
+    let tParent = target.parentNode;
+    tParent.removeChild(target);   
+}
+
+myList.addEventListener('click', deleteItem);
