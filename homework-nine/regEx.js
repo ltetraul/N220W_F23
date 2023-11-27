@@ -20,7 +20,9 @@ function validateZip() {
     let vz1 = /^[0-9]{5}$/;
     let vz2 = /^\d{5}$/;//same as above
     let vz3 = /^([0-9]{5})([0-9]{4})?$/;
-    document.getElementById('zipAns').innerText = vz3.test(zipText.value);
+    let vz4 = /^([0-9]{5})([- ]?[0-9]{4})?$/;
+
+    document.getElementById('zipAns').innerText = vz4.test(zipText.value);
 }
 
 zipText.addEventListener('blur', validateZip);
@@ -41,3 +43,11 @@ let dateRegEx = /[1-9]|[12][0-9]|3[01]/;
 
 //year (20th or 21st century)
 let yearRegEx = /(19|20)\d{2}/;
+
+//phone number
+function validatePhoneNumber() {
+    let vp1 = /^\(?\d{3}\)?[-. ]?\d{3}[-. ]?\d{4}$/;
+    document.getElementById('phoneAns').innerText = vp1.test(phoneText.value);
+}
+
+phoneText.addEventListener('blur', validatePhoneNumber);
