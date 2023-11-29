@@ -32,8 +32,8 @@ const pURL = document.getElementById("pageURL");
 const lUpdate = document.getElementById("myLastUpdate");
 
 displayInfo = () => {
-  pURL.innerHTML = "URL: " + window.location;
-  lUpdate.innerHTML = "Last Update: " + document.lastModified;
+  pURL.innerHTML = `<p>URL: ${window.location}</p>`;
+  lUpdate.innerHTML = `<p>Last Update: ${document.lastModified}</p>`;
 }
 
 window.addEventListener("load", displayInfo);
@@ -45,7 +45,7 @@ let pressCount = 0;
 
 const countKey = () => {
   pressCount++;
-  keyNum.innerHTML = " You have pressed a key " + pressCount + " times.";
+  keyNum.innerHTML = `<p>You have pressed a key ${pressCount} times.</p>`;
 }
 keyInput.addEventListener("keydown", countKey);
 
