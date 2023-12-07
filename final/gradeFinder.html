@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Finder</title>
+</head>
+<body>
+    <input type="number" id="userPoints" placeholder="Enter Point Total (Maximum is 500)">
+    <button onclick="calculate()">Your Grade</button>
+    <p id="results"></p>
+    <table id="table">
+        <tr>
+            <th>Letter</th>
+            <th>Range</th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>90-100</td>
+        </tr>
+        <tr>
+            <td>B</td>
+            <td>80-89</td>
+        </tr>
+        <tr>
+            <td>C</td>
+            <td>70-79</td>
+        </tr>
+        <tr>
+            <td>D</td>
+            <td>60-69</td>
+        </tr>
+        <tr>
+            <td>F</td>
+            <td>59-lower</td>
+        </tr>
+    </table>
+    <script src="gradeFinder.js"></script>
+</body>
+</html>
